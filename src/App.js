@@ -21,6 +21,17 @@ function App() {
 
   const handleSubmitForm = (event) => {
     event.preventDefault();
+
+    if (name !== "" && amount > 0) {
+      const expense = { name, amount };
+
+      setExpenses([...expenses, expense]);
+
+      setName("");
+      setAmount("");
+    } else {
+      console.log("Invalid input");
+    }
   };
 
   return (
