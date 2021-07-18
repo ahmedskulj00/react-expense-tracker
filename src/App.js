@@ -6,6 +6,23 @@ import { ALL_EXPENSES } from "./components/Expenses_data";
 
 function App() {
   const [expenses, setExpenses] = useState(ALL_EXPENSES);
+  const [name, setName] = useState("");
+  const [amount, setAmount] = useState("");
+
+  const handleName = (event) => {
+    console.log("Name ", event.target.value);
+    setName(event.target.value);
+  };
+
+  const handleAmount = (event) => {
+    console.log("Amount ", event.target.value);
+    setAmount(event.target.value);
+  };
+
+  const handleSubmitForm = (event) => {
+    event.preventDefault();
+  };
+
   return (
     <div className="App">
       <div className="title">
@@ -22,7 +39,13 @@ function App() {
           </p>
         </div>
       </div>
-      <Form />
+      <Form
+        name={name}
+        amount={amount}
+        handleName={handleName}
+        handleAmount={handleAmount}
+        handleSubmitForm={handleSubmitForm}
+      />
 
       <List expenses={expenses} />
     </div>

@@ -1,6 +1,6 @@
 import React from "react";
 
-function Form() {
+function Form({ name, amount, handleName, handleAmount, handleSubmitForm }) {
   return (
     <div>
       <div className="nameInput">
@@ -9,6 +9,8 @@ function Form() {
           type="text"
           name="name"
           id="expenseName"
+          value={name}
+          onChange={handleName}
           placeholder="Name of expense?"
         />
       </div>
@@ -18,6 +20,8 @@ function Form() {
           type="number"
           name="amount"
           id="expenseAmount"
+          value={amount}
+          onChange={handleAmount}
           placeholder="0.00"
         />
       </div>
