@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Form from "./components/Form";
+import List from "./components/List";
 import "./App.css";
 import { ALL_EXPENSES } from "./components/Expenses_data";
 
@@ -22,6 +23,8 @@ function App() {
         </div>
       </div>
       <Form />
+
+      <List expenses={expenses} />
     </div>
   );
 }
