@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Form from "./components/Form";
 import List from "./components/List";
 import "./App.css";
@@ -8,6 +8,10 @@ function App() {
   const [expenses, setExpenses] = useState(ALL_EXPENSES);
   const [name, setName] = useState("");
   const [amount, setAmount] = useState("");
+
+  useEffect(() => {
+    localStorage.setItem("expenses", JSON.stringify(expenses));
+  }, [expenses]);
 
   const handleName = (event) => {
     console.log("Name ", event.target.value);
