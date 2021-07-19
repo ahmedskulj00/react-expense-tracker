@@ -12,29 +12,33 @@ function Form({
     <div>
       <form onSubmit={handleSubmitForm}>
         <div className="nameInput">
-          <label htmlFor="nameExpense">Name of the expense</label>
           <input
             type="text"
             name="name"
             id="expenseName"
             value={name}
             onChange={handleName}
-            placeholder="Name of expense?"
+            placeholder="Insert the name of expense"
           />
         </div>
         <div className="amountInput">
-          <label htmlFor="amountExpense"> Amount</label>
           <input
-            type="number"
+            type="text"
             name="amount"
             id="expenseAmount"
             value={amount}
             onChange={handleAmount}
-            placeholder="0.00"
+            placeholder="Insert the amount"
           />
         </div>
-        <button type="submit">Add</button>
-        <button onClick={handleClear}>Clear</button>
+        <div className="buttons">
+          <button type="submit" className="btn">
+            Add
+          </button>
+          <button onClick={handleClear} className="btn">
+            Clear
+          </button>
+        </div>
       </form>
     </div>
   );

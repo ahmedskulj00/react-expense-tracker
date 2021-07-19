@@ -34,7 +34,7 @@ function App() {
       setName("");
       setAmount("");
     } else {
-      alert("Invalid input");
+      console.log("Invalid input");
     }
   };
 
@@ -45,12 +45,12 @@ function App() {
   return (
     <div className="App">
       <div className="title">
-        <h2>Expense tracker fam</h2>
         <div>
           <p>
             {" "}
             Total expenses:{" "}
             <div className="total-value">
+              $
               {expenses.reduce((accumulator, currentValue) => {
                 return (accumulator += parseInt(currentValue.amount));
               }, 0)}
