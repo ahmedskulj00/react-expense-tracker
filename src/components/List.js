@@ -6,7 +6,8 @@ const List = ({ expenses }) => {
       <ul>
         {expenses.map((item) => (
           <li key={item.id} className="list-elements">
-            {item.name} - ${item.amount}
+            <div className="item-name">{item.name}</div>{" "}
+            <div className="item-amount">${item.amount}</div>
           </li>
         ))}
       </ul>
