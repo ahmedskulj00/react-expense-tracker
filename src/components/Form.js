@@ -1,6 +1,13 @@
 import React from "react";
 
-function Form({ name, amount, handleName, handleAmount, handleSubmitForm }) {
+function Form({
+  name,
+  amount,
+  handleName,
+  handleAmount,
+  handleSubmitForm,
+  handleClear,
+}) {
   return (
     <div>
       <form onSubmit={handleSubmitForm}>
@@ -27,6 +34,7 @@ function Form({ name, amount, handleName, handleAmount, handleSubmitForm }) {
           />
         </div>
         <button type="submit">Add</button>
+        <button onClick={handleClear}>Clear</button>
       </form>
     </div>
   );

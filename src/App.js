@@ -34,8 +34,12 @@ function App() {
       setName("");
       setAmount("");
     } else {
-      console.log("Invalid input");
+      alert("Invalid input");
     }
+  };
+
+  const handleClear = () => {
+    setExpenses([]);
   };
 
   return (
@@ -60,6 +64,7 @@ function App() {
         handleName={handleName}
         handleAmount={handleAmount}
         handleSubmitForm={handleSubmitForm}
+        handleClear={handleClear}
       />
 
       <List expenses={expenses} />
