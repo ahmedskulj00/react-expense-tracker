@@ -1,5 +1,6 @@
 import React from "react";
-
+import { TextField } from "@material-ui/core";
+import { Button } from "@material-ui/core";
 function Form({
   name,
   amount,
@@ -12,32 +13,28 @@ function Form({
     <div>
       <form onSubmit={handleSubmitForm}>
         <div className="nameInput">
-          <input
-            type="text"
-            name="name"
-            id="expenseName"
+          <TextField
+            className="standard-basic"
+            label="Insert the name of the expense"
             value={name}
             onChange={handleName}
-            placeholder="Insert the name of expense"
           />
         </div>
         <div className="amountInput">
-          <input
-            type="text"
-            name="amount"
-            id="expenseAmount"
+          <TextField
+            className="standard-basic"
+            label="Insert the amount"
             value={amount}
             onChange={handleAmount}
-            placeholder="Insert the amount"
           />
         </div>
         <div className="buttons">
-          <button type="submit" className="btn">
+          <Button variant="outlined" type="submit">
             Add
-          </button>
-          <button onClick={handleClear} className="btn">
+          </Button>
+          <Button variant="outlined" onClick={handleClear}>
             Clear
-          </button>
+          </Button>
         </div>
       </form>
     </div>
