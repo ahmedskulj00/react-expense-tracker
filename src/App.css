@@ -11,6 +11,8 @@
   text-align: center;
   font-size: 2rem;
   padding-top: 50px;
+  animation: fadeInLeft 1s;
+  color: black;
 }
 
 form {
@@ -19,34 +21,7 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-#expenseName {
-  width: 50em;
-  height: 3em;
-  outline: none;
-  border: none;
-  border-bottom: 1px solid black;
-  margin-left: 20px;
-  margin-bottom: 10px;
-}
-
-#expenseName:focus {
-  border-bottom: 2px solid black;
-}
-
-#expenseAmount {
-  width: 50em;
-  height: 3em;
-  outline: none;
-  border: none;
-  border-bottom: 1px solid black;
-  margin-left: 20px;
-  margin-bottom: 10px;
-}
-
-#expenseAmount:focus {
-  border-bottom: 2px solid black;
+  animation: fadeInLeft 1s;
 }
 
 .buttons {
@@ -69,6 +44,7 @@ form {
   width: 50em;
   display: block;
   margin: 0 auto;
+  animation: fadeInLeft 1s;
 }
 
 th {
@@ -78,4 +54,17 @@ th {
 td {
   width: 50em;
   text-align: center;
+  animation: fadeInLeft 1s;
+  font-weight: 500;
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
